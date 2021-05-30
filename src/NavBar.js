@@ -7,6 +7,12 @@ const NavBar = (props) => {
                 <li className="navLink">
                     <a href="/illnesses"> Illnesses </a>
                 </li>
+                <li className="navLink">
+                    <a href="/patients"> Patients </a>
+                </li>
+                <li className="navLink">
+                    <a href="/specialists"> Specialists </a>
+                </li>
             </ul>
         </header>
     )

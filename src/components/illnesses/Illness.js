@@ -1,18 +1,20 @@
-import React from 'react'
+import React, {Fragment} from 'react';
 
 const Illness = ({illness}) => {
 
-    if(!illness) {
-        return "Loading..."
+    if (!illness){
+      return "Loading..."
     }
-
     return (
-        <>
-            <p>
-                Illness: {illness.name}
-            </p>
-        </>
+      <Fragment>
+      <p>
+      {illness.name}
+      <br></br>
+      {illness.specialist.speciality}
+      </p>
+      </Fragment>
     )
-}
-
-export default Illness
+  }
+  
+  export default Illness;
+  

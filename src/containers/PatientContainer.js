@@ -1,22 +1,22 @@
 import React, {Component, Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import IllnessList from '../components/illnesses/IllnessList';
+import PatientList from '../components/patients/PatientList';
 import Request from '../helpers/request';
 
-class IllnessContainer extends Component {
+class PatientContainer extends Component {
   constructor(props){
     super(props);
     this.state = {
-      illnesses: []
+      patients: []
     }
   }
 
   componentDidMount(){
     const request = new Request();
 
-    request.get('/api/illnesses')
+    request.get('/api/patients')
     .then((data) => {
-      this.setState({illnesses: data})
+      this.setState({patients: data})
     })
   }
 
@@ -26,7 +26,7 @@ class IllnessContainer extends Component {
       <Fragment>
       <Switch>
       <Route render={(props) =>{
-        return <IllnessList illnesses={this.state.illnesses}/>
+        return <PatientList patients={this.state.patients}/>
       }}/>
       </Switch>
       </Fragment>
@@ -36,4 +36,4 @@ class IllnessContainer extends Component {
 
 }
 
-export default IllnessContainer;
+export default PatientContainer;

@@ -1,18 +1,18 @@
 import React from 'react';
-import Illness from './Illness.js';
+import Patient from './Patient.js';
 
 
-const IllnessList = (props) => {
+const PatientList = (props) => {
 
-	if (props.illnesses.length === 0){
+	if (props.patients.length === 0){
 	  return (<p>Loading...</p>)
 	}
 
-	const illnesses = props.illnesses.map((illness, index) => {
+	const patients = props.patients.map((patient, index) => {
 	  return (
 	    <li key={index} className="component-item">
 	    <div className="component">
-	    <Illness illness={illness} />
+	    <Patient patient={patient} />
 	    </div>
 	    </li>
 	  )
@@ -20,9 +20,8 @@ const IllnessList = (props) => {
 
 	return (
 	  <ul className="component-list">
-	    {illnesses}
+	    {patients}
 	  </ul>
 	)
 }
- export default IllnessList;
-
+ export default PatientList;
