@@ -11,23 +11,23 @@ const SpecialistContainer = () => {
 
     request.get('/api/specialists')
     .then((data) => {
-      this.setState({specialists: data})
+      setSpecialists(data)
     })
-  }
+  },[])
 
-  render(){
+  
     return(
       <Router>
-      <Fragment>
-      <Switch>
-      <Route render={(props) =>{
-        return <SpecialistList specialists={this.state.specialists}/>
-      }}/>
-      </Switch>
-      </Fragment>
+        <Fragment>
+          <Switch>
+            <Route>
+                <SpecialistList specialists={specialists}/>
+            </Route>
+          </Switch>
+        </Fragment>
       </Router>
     )
-  }
+  
 
 }
 

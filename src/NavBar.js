@@ -4,9 +4,7 @@ const NavBar = (props) => {
     return (
         <header>
             <ul>
-                <li className="navLink">
-                    <a href="/illnesses"> Illnesses </a>
-                </li>
+                
                 <li className="navLink">
                     <a href="/patients"> Patients </a>
                 </li>
