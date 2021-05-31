@@ -85,4 +85,5 @@
   
   .photo {
       height:120px;
+      image-rendering: pixelated;
   }

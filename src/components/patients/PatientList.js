@@ -2,13 +2,13 @@ import React from 'react';
 import Patient from './Patient.js';
 
 
-const PatientList = (props) => {
+const PatientList = ({patients}) => {
 
-	if (props.patients.length === 0){
+	if (patients.length === 0){
 	  return (<p>Loading...</p>)
 	}
 
-	const patients = props.patients.map((patient, index) => {
+	const renderPatients = patients.map((patient, index) => {
 	  return (
 	    <li key={index} className="component-item">
 	    <div className="component">
@@ -20,7 +20,7 @@ const PatientList = (props) => {
 
 	return (
 	  <ul className="component-list">
-	    {patients}
+	    {renderPatients}
 	  </ul>
 	)
 }

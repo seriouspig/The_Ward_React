@@ -1,17 +1,12 @@
-import React, {Component, Fragment} from 'react';
+import React, {useState, useEffect, Fragment} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import SpecialistList from '../components/specialists/SpecialistList';
 import Request from '../helpers/request';
 
-class SpecialistContainer extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      specialists: []
-    }
-  }
+const SpecialistContainer = () => {
+  const[specialists, setSpecialists] = useState([])
 
-  componentDidMount(){
+  useEffect(() => {
     const request = new Request();
 
     request.get('/api/specialists')

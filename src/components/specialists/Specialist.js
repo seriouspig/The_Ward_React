@@ -8,7 +8,7 @@ const Specialist = ({specialist}) => {
   return (
     <Fragment>
         <div className="flex-container">
-            <img src={`/images/doctors/${specialist.photo}`} className="photo"/>
+            <img src={`/images/doctors/${specialist.name}.png`} className="photo"/>
             <div>
             <h4> Name: {specialist.name} </h4>
             <p> Age: {specialist.age}</p>
